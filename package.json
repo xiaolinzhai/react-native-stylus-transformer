@@ -1,6 +1,6 @@
 {
   "name": "react-native-stylus-transformer-alin",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Stylus transformer for react-native ,support cli",
   "main": "index.js",
   "repository": "https://github.com/kristerkari/react-native-stylus-transformer",
@@ -14,10 +14,7 @@
   },
   "author": "a2231232",
   "license": "MIT",
-  "files": [
-    "index.js",
-    "README.md"
-  ],
+
   "keywords": [
     "react-native",
     "ReactNative",
