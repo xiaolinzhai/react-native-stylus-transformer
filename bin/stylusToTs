@@ -23,8 +23,29 @@ fs.stat(file,function(err,stat){
       if(err)throw err;
       var css =stylus.render(str);
       var cssObject = renderCSSToReactNative(css);
+      var str = [];
+      for(key in cssObject){
+        var str2 = [];
+        for(key2 in cssObject[key]){
+          let _val = cssObject[key][key2]
+          if(typeof _val ==  'string'){
+            _val = _val.replace(
+              /(\d*\.?\d+)dp/g,
+              (match, m1) => "pxToDp(" + parseFloat(m1, 10) + ")",
+            )
+          }
+          if(_val.indexOf("pxToDp") == -1){
+            str2.push(key2 + ":" + JSON.stringify(_val))
+          }else{
+            str2.push(key2 + ":" + _val)
+          }
+
+        }
+        str.push(key + ":{\n\t\t" +str2.join(",\n\t\t") + "\n\t}")
+      }
       console.log(JSON.stringify(cssObject));
-      fs.writeFile(file.replace(".styl",".ts"), JSON.stringify(cssObject), function(err){
+      cssObject.keys
+      fs.writeFile(file.replace(".styl",".ts"), "import pxToDp from \"utils/Unit\";\nimport {StyleSheet} from \"react-native\";\nexport default StyleSheet.create({\n\t" + str.join(",\n\t") +"\n})", function(err){
         if (err) throw err;
         console.log('  \033[90mcompiled\033[0m %s', file);
       });

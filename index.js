@@ -1,5 +1,5 @@
 var semver = require("semver");
-var css2rn = require("css-to-react-native-transform").default;
+var css2rn = require("css-to-react-native-transform-alin").default;
 var stylus = require("stylus");
 
 var upstreamTransformer = null;
