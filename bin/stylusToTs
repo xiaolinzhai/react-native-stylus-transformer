@@ -2,7 +2,32 @@
 /**
  * Module dependencies.
  */
-
+var fs = require('fs');
 var css2rn = require("css-to-react-native-transform").default;
-css2rn(".test{color:\"red\"}", { parseMediaQueries: true });
-console.log("-----ccccc-----");
+var semver = require("semver");
+var stylus = require("stylus");
+var args = process.argv.slice(2);
+
+function renderToCSSPromise(css) {
+  return Promise.resolve(renderToCSS(css));
+}
+
+function renderCSSToReactNative(css) {
+  return css2rn(css, { parseMediaQueries: true });
+}
+var file = args[0];
+fs.stat(file,function(err,stat){
+  if(err)throw err;
+  if(stat.isFile()){
+    fs.readFile(file,'utf8',function(err,str){
+      if(err)throw err;
+      var css =stylus.render(str);
+      var cssObject = renderCSSToReactNative(css);
+      console.log(JSON.stringify(cssObject));
+      fs.writeFile(file.replace(".styl",".ts"), JSON.stringify(cssObject), function(err){
+        if (err) throw err;
+        console.log('  \033[90mcompiled\033[0m %s', file);
+      });
+    })
+  }
+})
