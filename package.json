@@ -9,7 +9,7 @@
     "precommit": "lint-staged",
     "test": "eslint ."
   },
-  "author": "Krister Kari",
+  "author": "a2231232",
   "license": "MIT",
   "files": [
     "index.js",

@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+/**
+ * Module dependencies.
+ */
+
+var css2rn = require("css-to-react-native-transform").default;
+css2rn(".test{color:\"red\"}", { parseMediaQueries: true });
+console.log("-----ccccc-----");
