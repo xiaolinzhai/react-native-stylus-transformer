@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 var fs = require('fs');
-var css2rn = require("css-to-react-native-transform").default;
+var css2rn = require("css-to-react-native-transform-alin").default;
 var semver = require("semver");
 var stylus = require("stylus");
 var args = process.argv.slice(2);
