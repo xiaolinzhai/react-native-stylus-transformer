@@ -443,19 +443,19 @@ css-parse@~2.0.0:
   dependencies:
     css "^2.0.0"
 
-css-to-react-native-transform@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/css-to-react-native-transform/-/css-to-react-native-transform-1.8.1.tgz#ec489a6f657e5fd697f5099d97b23be030abdb74"
-  integrity sha512-/pLLwhIM6zcOWsfLsf9driEl0BCArNkp4ixJcuFujPNJXdricfbtgLmj9vAQNveUvWoJxSjqXYuFrPdwunwB7g==
+css-to-react-native-transform-alin@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.npmjs.org/css-to-react-native-transform-alin/-/css-to-react-native-transform-alin-1.9.3.tgz#2115a80fb061ce93844245642a43dadcffca8d22"
+  integrity sha512-7h39odoc94xbu2NXvhIpXHlWA3j3zjqoBuZggjDk0UFhmuzwm9titcVy2DQm9X+8sTVCbb/TThahN3JVKFSy2A==
   dependencies:
     css "^2.2.4"
     css-mediaquery "^0.1.2"
-    css-to-react-native "^2.3.0"
+    css-to-react-native "^2.3.2"
 
-css-to-react-native@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-2.3.0.tgz#bf80d24ec4a08e430306ef429c0586e6ed5485f7"
-  integrity sha512-IhR7bNIrCFwbJbKZOAjNDZdwpsbjTN6f1agXeELHDqg1wHPA8c2QLruttKOW7hgMGetkfraRJCIEMrptifBfVw==
+css-to-react-native@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/css-to-react-native/-/css-to-react-native-2.3.2.tgz#e75e2f8f7aa385b4c3611c52b074b70a002f2e7d"
+  integrity sha512-VOFaeZA053BqvvvqIA8c9n0+9vFppVBAHCp6JgFTtTMU3Mzi+XnelJ9XC9ul3BqFzZyQ5N+H0SnwsWT2Ebchxw==
   dependencies:
     camelize "^1.0.0"
     css-color-keywords "^1.0.0"
