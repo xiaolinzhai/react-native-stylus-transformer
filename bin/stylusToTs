@@ -34,7 +34,7 @@ fs.stat(file,function(err,stat){
               (match, m1) => "pxToDp(" + parseFloat(m1, 10) + ")",
             )
           }
-          if(_val.indexOf("pxToDp") == -1){
+          if(typeof _val ==  'string' && _val.indexOf("pxToDp") == -1){
             str2.push(key2 + ":" + JSON.stringify(_val))
           }else{
             str2.push(key2 + ":" + _val)
