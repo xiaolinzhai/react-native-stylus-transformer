@@ -5,7 +5,7 @@
 var fs = require('fs');
 var css2rn = require("css-to-react-native-transform-alin").default;
 var semver = require("semver");
-var stylus = require("stylus");
+var stylus = require("stylus-alin");
 var args = process.argv.slice(2);
 
 function renderToCSSPromise(css) {
